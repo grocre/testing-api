@@ -8,8 +8,6 @@ describe("testing http routes on server", () => {
         expect(response.statusCode).toBe(200)
         expect(response.body).toStrictEqual({"message": "okay"})
     })
-<<<<<<< HEAD
-=======
 
     test("Should return name received in request object", async () => {
         const response = await request(app)
@@ -20,5 +18,4 @@ describe("testing http routes on server", () => {
         expect(response.body).toStrictEqual({"name": "test"})
     })
 
->>>>>>> dev
 })

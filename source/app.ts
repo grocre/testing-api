@@ -9,4 +9,9 @@ app.get("/", (request: Request, response: Response) => {
     response.status(200).json({"message": "okay"})
 })
 
+app.post("/", (request: Request, response: Response) => {
+    const { username, password } = request.body 
+    
+})
+
 export default app 

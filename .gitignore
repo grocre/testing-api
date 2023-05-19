@@ -1,6 +1,10 @@
 # folders
 node_modules
+<<<<<<< HEAD
 dist
 
 # files
 .DS_Store
+=======
+dist
+>>>>>>> dev

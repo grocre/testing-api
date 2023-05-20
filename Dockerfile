@@ -12,7 +12,7 @@ FROM node:16-alpine
 WORKDIR /usr/app/prod
 
 COPY --from=builder usr/app/dev/dist/ .
-COPY --from=builde usr/app/dev/package.json . 
+COPY --from=builder usr/app/dev/package.json . 
 
 RUN yarn install --production
 

@@ -4,4 +4,6 @@ node_modules
 test
 
 #files 
+jest.config.js
+.gitignore
 

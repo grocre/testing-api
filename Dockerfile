@@ -1,4 +1,4 @@
-FROM node:16-alpine
+FROM node:16-alpine as builder
 
 WORKDIR /usr/app/dev
 
@@ -7,12 +7,12 @@ COPY . .
 RUN yarn install
 RUN yarn prod
 
-FROM stage:0
+FROM node:16-alpine
 
 WORKDIR /usr/app/prod
 
-COPY dist/ .
-COPY package.json . 
+COPY --from=builder usr/app/dev/dist/ .
+COPY --from=builde usr/app/dev/package.json . 
 
 RUN yarn install --production
 
